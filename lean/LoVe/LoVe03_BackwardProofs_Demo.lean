@@ -52,7 +52,7 @@ from the goal's conclusion (after `⊢`) into the goal's hypotheses (before `⊢
 `apply` matches the goal's conclusion with the conclusion of the specified
 theorem and adds the theorem's hypotheses as new goals. -/
 
-theorem fst_of_two_props_params (a b : Prop) (ha : a) (hb : b) :
+theorem fst_of_two_props_params (a b : Prop) (ha : a) (_ : b) :
   a :=
   by apply ha
 

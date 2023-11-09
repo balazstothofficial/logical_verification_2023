@@ -140,7 +140,7 @@ def powerIter (m n : ℕ) : ℕ :=
 
 #eval powerIter 2 5
 
-def append (α : Type) : List α → List α → List α
+def append (α : _) : List α → List α → List α
   | List.nil,       ys => ys
   | List.cons x xs, ys => List.cons x (append α xs ys)
 
