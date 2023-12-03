@@ -83,7 +83,7 @@ theorem prop_comp_inline (a b c : Prop) (hab : a → b)
   a → c :=
   assume ha : a
   show c from
-    hbc (hab ha)
+    hbc $ hab ha
 
 
 /- ## Forward Reasoning about Connectives and Quantifiers -/
@@ -206,7 +206,7 @@ Syntax:
 
 theorem two_mul_example (m n : ℕ) :
   2 * m + n = m + n + m :=
-calc 
+calc
   2 * m + n = m + m + n :=
     by rw [Nat.two_mul]
   _ = m + n + m :=
